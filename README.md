@@ -19,6 +19,14 @@
 Jenuary 02,2018  | **Release 1.0** | available from  **[GITHUB REPO](https://github.com/amanganiello90/reactive-spring-gateway-microservice/archive/develop.zip)**  |
 ---- | ---- | ---- |
 
+
+## NEXT DEVELOPMENTS (checked in progress)
+
+- [ ] Add travis config
+- [ ] Explain more and better on README.md
+- [ ] testing and replace endpoints
+
+
 ### How it works
 
 
