@@ -1,0 +1,26 @@
+spring:
+  jmx:
+    enabled: false
+  cloud:
+    gateway:
+      routes:
+      - id: proxy-id
+        uri: ${gateway.remote.url}
+        predicates:
+        - Path=/**
+        filters:
+        - RemoveRequestHeader=access_token
+        - RemoveRequestHeader=id_token
+        - AddBasicAuthHeader=${gateway.basic.auth.username}, ${gateway.basic.auth.password}
+ 
+######## CUSTOM SECTION DEFINE ENDPOINT VARIABLES########
+
+## GATEWAY
+ 
+gateway:
+  remote:
+    url: YOUR_REMOTE_URL_TO_REDIRECT
+  basic:
+    auth:
+      username: YOUR_BASIC_AUTH_USER
+      password: YOUR_BASIC_AUTH_PASSWORD
