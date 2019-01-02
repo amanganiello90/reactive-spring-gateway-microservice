@@ -11,7 +11,7 @@ spring:
         filters:
         - RemoveRequestHeader=access_token
         - RemoveRequestHeader=id_token
-        - AddBasicAuthHeader=${gateway.basic.auth.username}, ${gateway.basic.auth.password}
+        - AddBasicAuthHeader
  
 ######## CUSTOM SECTION DEFINE ENDPOINT VARIABLES########
 
