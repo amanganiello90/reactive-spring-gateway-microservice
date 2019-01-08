@@ -1,1 +1,9 @@
-
+sudo: true
+language: java
+env:
+    - JOB="JAVA"
+before_install:
+    - chmod +x mvnw && chmod +x .travis-deploy-heroku.sh
+install:
+    - ./mvnw clean package
+# script: ./.travis-deploy-heroku.sh
