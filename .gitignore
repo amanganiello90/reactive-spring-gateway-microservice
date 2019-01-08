@@ -5,7 +5,7 @@
 .settings
 .classpath
 .project
-
+!.mvn/wrapper/maven-wrapper.jar
 
 # Compiled class file
 *.class
@@ -20,7 +20,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
