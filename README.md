@@ -26,7 +26,7 @@ Jenuary 02,2018  | **Release 1.0** | available from  **[GITHUB REPO](https://git
 - [ ] Explain more and better on README.md
 - [ ] testing and replace endpoints
 - [ ] remove access_token and id_token in custom filter
-- [ ] create a spring boot starter and with module structure
+- [ ] create a spring boot starter with module microservice structure
 
 
 ### How it works
