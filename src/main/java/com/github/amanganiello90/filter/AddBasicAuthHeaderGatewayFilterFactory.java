@@ -13,6 +13,8 @@ public class AddBasicAuthHeaderGatewayFilterFactory extends AbstractGatewayFilte
   
   private static final String HEADER_KEY = "Authorization";
   private static final String BASIC_PREFIX = "Basic ";
+  private static final String ID_TOKEN = "id_token";
+  private static final String ACCESS_TOKEN = "access_token";
   
   @Value("${gateway.basic.auth.username:''}")
   private String basicUsername;
@@ -28,7 +30,11 @@ public class AddBasicAuthHeaderGatewayFilterFactory extends AbstractGatewayFilte
         sbHeaderValue.append(Base64.getEncoder().encodeToString(authCode.toString().getBytes())).toString();
     return (exchange, chain) -> {
       ServerHttpRequest request = exchange.getRequest().mutate()
-          .headers(httpHeaders -> httpHeaders.set(HEADER_KEY, authorizationH))
+         .headers(httpHeaders -> {
+            httpHeaders.set(HEADER_KEY, authorizationH);
+            httpHeaders.remove(ID_TOKEN);
+            httpHeaders.remove(ACCESS_TOKEN);
+          })
           .build();
       
       return chain.filter(exchange.mutate().request(request).build());
