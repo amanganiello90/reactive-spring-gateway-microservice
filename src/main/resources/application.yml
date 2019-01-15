@@ -9,8 +9,6 @@ spring:
         predicates:
         - Path=/**
         filters:
-        - RemoveRequestHeader=access_token
-        - RemoveRequestHeader=id_token
         - AddBasicAuthHeader
  
 ######## CUSTOM SECTION DEFINE ENDPOINT VARIABLES########
