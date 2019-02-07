@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/github/stars/amanganiello90/reactive-spring-gateway-microservice.svg">&nbsp;<a href="https://github.com/amanganiello90/reactive-spring-gateway-microservice/issues"><img src="https://img.shields.io/github/issues/amanganiello90/reactive-spring-gateway-microservice.svg">
 </a>&nbsp;<img src="https://img.shields.io/github/license/amanganiello90/reactive-spring-gateway-microservice.svg">&nbsp;<img src="https://img.shields.io/github/downloads/amanganiello90/reactive-spring-gateway-microservice/total.svg">&nbsp;
 
-> A Spring boot reactive 5 microservice gateway that uses [spring cloud gateway](https://spring.io/projects/spring-cloud-gateway). It routes any requests adding a basic authorization and removing any tokens using a custom filter (_AddBasicAuthHeader_). You have only to configure the **endpoints variables** in the **src/main/resources/application.yml** file.
+> A Spring boot reactive 5 microservice gateway that uses [spring cloud gateway](https://spring.io/projects/spring-cloud-gateway). It routes any requests adding a basic authorization filter (_AddBasicAuthHeader_). You have only to configure the **endpoints variables** in the **src/main/resources/application.yml** file.
 
 
 
